@@ -1,0 +1,16 @@
+<div class="box">
+      <img id='banner' src="res/images/banner.jpg" alt="Colmar Academy Banner">
+      <div class="startherebox">
+        <h1 class="font-weight-bold ">Learn something new everyday</h1>
+        <p>Lorum ipsum dolor sit amet,<br> consectetur adipicing elit.</p>
+        <a href="#" class="starthere">Start Here</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img class='information-main' src="res/images/information-main.jpg" alt="information-main">
+        </div>
+        <div class=""
+      </div>
+    </div>
