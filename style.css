@@ -2,48 +2,154 @@
   margin: 0;
   padding: 0;
 }
+/* ------    Title and Navigation    --------- */
 
-.opa30{
+  .opa30 {
     opacity: 40%;
-}
-h2{
-  font-size: 32px;
-}
-.tnav {
-	display: flex;
-	align-items: center;
-    margin-right:24px; 
-}
-nav {
+    }
+    
+    .tnav {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    }
+    
+    .tnav h2 {
+    font-size: 32px;
+    display: flex;
+    }
+    
+    /* Hide h2 on mobile screens */
+    @media only screen and (max-width: 576px) {
+    .tnav h2 {
+    display: none;
+    }
+    }
+    
+    @media only screen and (max-width: 576px) {
+    .desktop-nav {
+    display: none;
+    }
+    
+    .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    }
+    
+    .mobile-nav a img {
+    width: 100%;
+    max-width: 60px;
+    }
+    #logo{
+      margin-right: 50px;
+    }
+  }
+    
+    @media only screen and (min-width: 577px) {
+
+    .desktop-nav {
     display: flex;
     gap: 16px;
     margin-left: auto;
-}
-nav a {
-    color: black;
-    text-decoration: none;
-    font-size: 25px;
-}
-#logo{
-    margin-left:24px;
-}
-.box1 {
-    background-color:rgb(200, 222, 222);
-  }
-  .box2 {
-    background-color:rgb(215, 229, 229);
-  }
-  
-  #banner{
-    width: 100%;
-    height:auto;
-    display: block;
-    padding: 0px;
-    margin: 32px -90px;
+    }
+    .desktop-nav .links{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+    }
+    .desktop-nav .links:hover{
+      text-decoration:underline;
+      color: blue;
+    }
+    
+    .mobile-nav {
+    display: none;
+    }
+    }
+    
+    #logo {
+    margin-left: 24px;
+    width:auto;
+    }
+    /* ------ Title & Navigation Ends --------*/
 
+    
+
+.box2 {
+    background-color:rgb(215, 229, 229);
+}
+
+/* Container 1 starts */
+.box1 {
+  background-color:rgb(200, 222, 222);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: -10px;
+  margin: 32px -90px;
+}
+
+@media only screen and (max-width: 576px) {
+  #banner {
+    width: 100%;
+    margin: 32px 0;
   }
+}
+.lsnebox {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lsne {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: sans-serif;
+  opacity: 90%;
+  margin-top: -120px;
+}
+
+.lsnep {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 90%;
+  margin-left:0px;
+  text-align: left;
+}
+
+#shlink {
+  text-decoration: none;
+  background-color: rgb(40, 32, 32);
+  color:white;
+  font-size:1rem;
+  padding: 8px 30%;
+  text-align: center;
+  font-family: Helvetica;
+  margin-top: 24px;
+  margin-bottom: 34px;
+}
+
+
+@media screen and (min-width: 768px) {
   .lsnebox{
-    margin:-30px;
+    margin:32px -30px -30px -30px;
   }
   .lsne{
     font-size:60px;
@@ -62,10 +168,36 @@ nav a {
     background-color: rgb(40, 32, 32);
     color:white;
     font-size:30px;
-    padding: 8px 120px;
+    padding: 8px 35%;
     text-align: justify;
     font-family: Helvetica;
   }
+}
+
+/* Container1 Ends*/
+
+
+/* Container 2 Starts*/
+@media only screen and (max-width: 576px) {
+  #info-main{
+    display:none;
+  }
+  #info-or,#info-camp,#info-gl{
+    width:360px;
+    height:200px;
+    padding:16px;
+  }
+  .inf{
+    border: 0px solid black;
+    margin:2px;
+  }
+  .mhide{
+    display:none;
+
+  }
+}
+@media only screen and (min-width: 577px) {
+
   #info-main{
     width:100%;
     height:auto;
@@ -90,7 +222,7 @@ nav a {
     margin-top:100px;
   }
   .bottom{
-    margin-bottom:100px;
+    margin-bottom:32px;
 
   }
   #infos{
@@ -128,6 +260,15 @@ nav a {
     margin-bottom: 32px;
 
   }
+}
+
+/*------------Container 2 Ends------------*/
+
+
+
+
+/*------------Cards------------*/
+@media only screen and (max-width: 576px) {
   .sl{
     padding-top:32px;
     margin-bottom:32px;
@@ -135,47 +276,132 @@ nav a {
   .secondrow{
     padding-bottom:32px;
   }
-  .te{
-    font-family: sans-serif;
-    font-weight: bold;
+  
+  .card-img-top, .card-text, .courses{
+    display:none;
+  }
+  
+  .card-body {
     text-align: center;
-    padding: 32px 0px;
   }
-  .video{
-    margin-left:-90px;
+  
+  .card-title {
+    display: block;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:0px 14px;
+    text-align: left;
+    color: black;
   }
+
+}
+
+.card-title a{
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 577px) {
+  .sl{
+    padding-top:32px;
+    margin-bottom:32px;
+  }
+  .secondrow{
+    padding-bottom:32px;
+  }
+}
+
+
+/* ----------The thesis----------- */
+
+
+@media only screen and (max-width: 576px) {
+  .te {
+    padding: 16px 0px;
+  }
+  .video {
+    width: 100%;
+    margin:0px;
+  }
+  #fisma, #now {
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    display: none;
+  }
+  .thesis-title, .fisma-desc, .new-desc, .ru, .ru-desc {
+    display: none;
+  }
+  .copyrights{
+    text-align: center;
+    
+    
+    }
+    .text-right{
+      display: none;
+    }
+    .deskvideo{
+      display: none;
+    }
+    .copyrights{
+      display: none;
+    }
+
+}
+@media only screen and (min-width: 577px) {
+  .mobile-video{
+    display: none;
+  }
+  .mobilecopy{
+    display: none;
+  }
+}
+
+.te{
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 32px 0px;
+}
+.video{
+  margin-left:-90px;
+}
 #fisma,#now{
 
-  width:35%;
-  height:auto;
-  padding:16px;
+width:35%;
+height:auto;
+padding:16px;
 
 }
 .thesis-title{
-  margin-top:30px;
+margin-top:30px;
 }
 .thesis{
-  margin-left:24px;
+margin-left:24px;
 }
 .ru{
-  margin-top:24px;
-  margin-left:-90px;
-  font-weight: bolder;
-  margin-bottom:8px;
+margin-top:24px;
+margin-left:-90px;
+font-weight: bolder;
+margin-bottom:8px;
 }
 .ru-desc{
-  margin-left:-90px;
-  font-family: sans-serif;
-  opacity:90%;
-  margin-bottom:32px;
+margin-left:-90px;
+font-family: sans-serif;
+opacity:90%;
+margin-bottom:32px;
 }
 .copyrights{
-  margin-left:-90px;
+margin-left:-90px;
 
 
 }
 .text-right{
-  text-decoration: none;
-  color:black;
-  opacity:90%;
+text-decoration: none;
+color:black;
+opacity:90%;
+}
+.mobilecopy{
+  margin-top: 40px;
+  margin-bottom: 16px;
 }
